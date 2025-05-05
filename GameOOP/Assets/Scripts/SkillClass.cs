@@ -13,6 +13,21 @@ public abstract class SkillClass
         this.cooldown = cooldown;
     }
 
+    public float Cooldown
+    {
+        get { return cooldown; } //read-only property for cooldown
+        set 
+        {
+            if (value >= 0)
+            {
+                cooldown = value;
+            }
+            else
+            {
+                Debug.LogError("Cooldown cannot be negative");
+            }
+        }
+    }
     public string NameSkill
     {
         get { return nameSkill; }
@@ -31,8 +46,19 @@ public abstract class SkillClass
 
     public Sprite IconSkill
     {
-        get => iconSkill;
-        set => iconSkill = value;
+        get{return iconSkill;}
+
+        protected set
+        {
+            if(value != null)
+            {
+                iconSkill = value;
+            }
+            else
+            {
+                Debug.LogError("Icon cannot be null");
+            }
+        }
     }
 
 }
