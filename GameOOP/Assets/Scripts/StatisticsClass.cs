@@ -2,8 +2,8 @@ using UnityEngine;
 
 public abstract class StatisticsClass
 {
-    private float maxValue;
-    private float minValue;
+    private float maxValue = 100f;
+    private float minValue = 0f;
     private float currentValue;
 
     protected StatisticsClass(float maxValue, float minValue, float currentValue)

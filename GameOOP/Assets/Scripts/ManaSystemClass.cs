@@ -8,7 +8,7 @@ public enum ManaState //this enum is used to define the mana state
 
 public class ManaSystemClass : StatisticsClass
 {
-    private float speedRecharge; //this variable is used to define the speed of mana recharge
+    [SerializeField] private float speedRecharge; //this variable is used to define the speed of mana recharge
 
     
     public ManaSystemClass(float maxValue, float minValue, float currentValue, float speedRecharge) : base(maxValue, minValue, currentValue)
