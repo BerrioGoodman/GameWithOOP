@@ -31,6 +31,5 @@ public abstract class IntermediateSkills : SkillClass
             return false; //cannot use the skill
         }
     }
-    
-    
+       
 }
